@@ -7,11 +7,13 @@ export default class Feature extends Component {
             const selectedClass = item.name === this.props.selected[this.props.name].name ? 'feature__selected' : '';
             const featureClass = 'feature__option ' + selectedClass;
             return (
-            <FeatureOption 
-                featureClass={featureClass}
-                key={index} 
-                onSelect={this.props.onSelect}
-                item={item}/>
+                <FeatureOption 
+                    featureClass={featureClass}
+                    key={index} 
+                    onSelect={this.props.onSelect}
+                    item={item}
+                    featureName={this.props.name}
+                />
             )
         })
 
